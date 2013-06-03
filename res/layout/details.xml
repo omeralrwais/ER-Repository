@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="304dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="Pomona Valley Hospital Medical Center - 1798 N Garey Ave Pomona, CA 91767 (909) 865-9500 pvhmc.org" >
+
+        <requestFocus />
+    </EditText>
+
+    <WebView
+        android:id="@+id/webView1"
+        android:layout_width="match_parent"
+        android:layout_height="252dp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:text="Close" />
+
+</LinearLayout>
