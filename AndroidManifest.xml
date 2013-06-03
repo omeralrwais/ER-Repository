@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name="ListClass"></activity>
+        <activity android:name="Detail"></activity>
     </application>
 
 </manifest>

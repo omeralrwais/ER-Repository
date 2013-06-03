@@ -34,11 +34,11 @@
     </ListView>
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="72dp"
-        android:layout_y="350dp"
+        android:layout_x="99dp"
+        android:layout_y="403dp"
         android:text="Go to that ER" />
 
 </AbsoluteLayout>
