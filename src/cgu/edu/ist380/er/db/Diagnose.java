@@ -18,6 +18,8 @@ public class Diagnose {
 	private boolean urine;
 	private boolean breath;
 	private int painScale;
+	private Date visitTime;
+	
 	public Diagnose() {
 		super();
 		this.bodyTemperature = 0.0;
@@ -33,8 +35,17 @@ public class Diagnose {
 		this.urine = false;
 		this.breath = false;
 		this.painScale = -1;
+		this.visitTime= new Date(0,0,1);
 	}
 	
+	public Date getVisitTime() {
+		return visitTime;
+	}
+
+	public void setVisitTime(Date visitTime) {
+		this.visitTime = visitTime;
+	}
+
 	public double getBodyTemperature() {
 		return bodyTemperature;
 	}

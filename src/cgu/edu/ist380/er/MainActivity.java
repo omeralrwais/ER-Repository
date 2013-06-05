@@ -15,12 +15,12 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		Button mainNext = (Button) findViewById(R.id.finder);
+		Button mainNext = (Button) findViewById(R.id.find);
 	       
 	       mainNext.setOnClickListener(new OnClickListener() {
 	           public void onClick(View v) {
 	               Intent i = new Intent();
-	               i.setClassName("cgu.edu.ist380.er", "cgu.edu.ist380.er.ListClass");
+	               i.setClassName("cgu.edu.ist380.er", "cgu.edu.ist380.er.Diagnose");
 	               startActivity(i);
 	           }
 	       });
