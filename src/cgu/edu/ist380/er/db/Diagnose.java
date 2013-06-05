@@ -4,7 +4,8 @@ import java.util.Date;
 
 public class Diagnose {
 	
-
+    private int id;
+	private int pid;
 	private double bodyTemperature;
 	private boolean ambulance;
 	private boolean bleed;
@@ -36,6 +37,30 @@ public class Diagnose {
 		this.breath = false;
 		this.painScale = -1;
 		this.visitTime= new Date(0,0,1);
+		this.pid=0;
+		this.id=0;
+	}
+	
+	
+	
+	public int getId() {
+		return id;
+	}
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+
+	public int getPid() {
+		return pid;
+	}
+
+	public void setPid(int pid) {
+		this.pid = pid;
 	}
 	
 	public Date getVisitTime() {
