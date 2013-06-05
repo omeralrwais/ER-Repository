@@ -85,6 +85,7 @@ public class DiagnoseDataSource {
 	    Log.i(PatientDataSource.class.getName(), "Record : Diagnose with id:" + d.getId() +" was deleted from the db.");  
 	  }
 	  
+	// no listing because there is no need to
 	
 	
 }
