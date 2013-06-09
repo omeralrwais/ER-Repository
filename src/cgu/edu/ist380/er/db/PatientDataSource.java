@@ -1,5 +1,7 @@
 package cgu.edu.ist380.er.db;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -63,6 +65,15 @@ public class PatientDataSource {
 			    long insertedId = database.insert(MySQLiteHelper.TABLE_ER,null, values);
 			    p.setId((int)insertedId);
 			    Log.i(PatientDataSource.class.getName(), "Record : Patient with id:" + p.getId() +" was inserted to the db.");
+			    Log.i(PatientDataSource.class.getName(), "FirstName : " + p.getFirstName());
+			    Log.i(PatientDataSource.class.getName(), "LastName : " + p.getLastName());
+			    Log.i(PatientDataSource.class.getName(), "Address : " + p.getAddress());
+			    Log.i(PatientDataSource.class.getName(), "City : " + p.getCity());
+			    Log.i(PatientDataSource.class.getName(), "Gender : " + p.getGender());
+			    Log.i(PatientDataSource.class.getName(), "Phone : " + p.getPhone());
+			    Log.i(PatientDataSource.class.getName(), "Zib : " + p.getZib());
+			    Log.i(PatientDataSource.class.getName(), "DOB : " + p.getDob().toString());
+		
 			    return p; /* What is the point of returning the passed object ?????????? */
 			    
 			  }
@@ -114,8 +125,19 @@ public class PatientDataSource {
 	    String qtyType = cursor.getString(cursor.getColumnIndexOrThrow(MySQLiteHelper.ER_COLUMN_CITY));
 	    int enabled =cursor.getInt(cursor.getColumnIndexOrThrow(MySQLiteHelper.ER_COLUMN_ZIB));
 	    meds.setId((int) id);
-	    Date d= new Date (dob);
-	    meds.setDob(d);
+	    SimpleDateFormat  format = new SimpleDateFormat("yyyy-MM-dd");
+	    try
+ 	   {
+ 	    Date date = format.parse(dob);
+ 	    meds.setDob(date);
+ 	   }
+ 	   catch (ParseException e)
+ 	   {
+ 		   e.printStackTrace(); 
+ 	   }
+	    
+	    //Date d= new Date (dob);
+	   
 	    meds.setGender(g);
 	    meds.setFirstName(f);
 	    meds.setLastName(l);

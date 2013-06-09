@@ -25,6 +25,7 @@
         <activity android:name="ListClass"></activity>
         <activity android:name="Detail"></activity>
         <activity android:name="Diagnose"></activity>
+        <activity android:name="TestDB"></activity>
     </application>
 
 </manifest>

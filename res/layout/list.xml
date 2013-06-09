@@ -4,7 +4,7 @@
     android:layout_height="match_parent" >
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/fn"
         android:layout_width="300dp"
         android:layout_height="134dp"
         android:layout_x="4dp"
